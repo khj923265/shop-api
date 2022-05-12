@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: jdbc:mysql://khj-mysql.c3v5lt5xhixx.us-east-1.rds.amazonaws.com:3306/khj
+    username: admin
+    password: gudwns1!
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update # DB 초기화 전략
+    properties:
+      hibernate:
+        format_sql: true # 콘솔에 출력되는 JPA 실행 쿼리를 가독성있게 표현
+logging:
+  level:
+    org.springframework: debug
+    org.hibernate.SQL: info
+    org.hibernate.type.descriptor.sql.BasicBinder: trace # 로그에 뜨는 ? 에 어떤값이 들어갔는지 보고싶을 때
